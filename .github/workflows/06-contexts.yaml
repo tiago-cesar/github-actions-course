@@ -38,5 +38,5 @@ jobs:
           echo "Overwritten env: $MY_OVERWRITTEN_VAR"
       - name: Printing Env Vars
         run: |
-          echo "Workflow env: $MY_WORKFLOW_VAR"
-          echo "Overwritten env: $MY_OVERWRITTEN_VAR"
+          echo "Workflow env: ${{ env.MY_WORKFLOW_VAR }}"
+          echo "Overwritten env: ${{ env.MY_OVERWRITTEN_VAR }}"
