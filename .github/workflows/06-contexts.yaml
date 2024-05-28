@@ -1,8 +1,12 @@
 name: 06 - Contexts
-
+run-name: 06 - Contexts | DEBUG - ${{ inputs.DEBUG }}
 on:
   push:
   workflow_dispatch:
+    inputs:
+      debug:
+        type: boolean
+        default: false
 
 jobs:
   echo-data:
@@ -18,4 +22,4 @@ jobs:
           echo Run ID: ${{ github.run_id }}
           echo Run Number: ${{ github.run_number }}
       - name: Retrieve Variable
-        run: echo "The MY_VAR variable value is ${{vars.MY_VAR}}"
+        run: echo "The MY_VAR variable value is ${{ vars.MY_VAR }}"
