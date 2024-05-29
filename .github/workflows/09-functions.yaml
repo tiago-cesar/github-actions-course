@@ -11,7 +11,7 @@ jobs:
       - name: Print PR title
         run: |
           format('PR title: {0}', '${{ github.event.pull_request.title }}')
-      - name: Print PR title
+      - name: Print PR labels
         run: |
           cat << EOF
           ${{ toJson(github.event.pull_request.labels) }}
