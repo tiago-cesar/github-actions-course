@@ -1,15 +1,16 @@
 name: 09 - Using Functions
 
 on:
+  pull_request:
   workflow_dispatch:
 
 jobs:
   echo1:
     runs-on: ubuntu-latest
     steps:
-      - name: Print PR title
+      - name: Print Event Name
         run: |
-          echo "${{ github.event.pull_request.title }}"
+          echo ${{ format('PR title: {0}',  github.event_name ) }}
       - name: Print PR labels
         run: |
           cat << EOF
