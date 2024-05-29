@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Print PR title
         run: |
-          format('PR title: {0}', ${{ github.event.pull_request.title }})
+          format('PR title: {0}', '${{ github.event.pull_request.title }}')
       - name: Print PR title
         run: |
           cat << EOF
