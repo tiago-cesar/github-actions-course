@@ -38,8 +38,8 @@ jobs:
           cat '$GITHUB_OUTPUT'
       - name: Download cached dependencies
         uses: actions/cache@v3
-        id: cache
         if: ${{ inputs.use-cache }}
+        id: cache
         with:
           path: 13-caching/react-app/node_modules
           key: ${{ steps.cache-key.outputs.CACHE_KEY }}
