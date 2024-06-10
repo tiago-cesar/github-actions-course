@@ -1,15 +1,15 @@
 name: Ping URL
 description: "Ping URL until maximum trials have exceed. If result is not 200 until then, fails the action."
 
-inputs:
-  url:
+inputs: # each input defined in the custom action will become available as environment variables like below
+  url: # INPUT_URL environment variable
     required: true
     description: "URL to ping"
-  max_trials:
+  max_trials: # INPUT_MAX_TRIALS environment variable
     required: false
     description: "Maximum number of trials until action fails."
     default: '10'
-  delay:
+  delay: # INPUT_DELAY environment variable
     required: false
     description: "Delay in seconds between trials"
     default: '5'
