@@ -23,3 +23,7 @@ inputs:
   debug:
     description: "Whether the outuput debug messages to the console"
     default: 'false'
+
+outputs:
+  updates-available:
+    description: Whether there are updates available.
